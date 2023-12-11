@@ -17,7 +17,7 @@ public class Postman {
                 .when()
                 .post("/post")
                 .then()
-                .statusCode(200)
+                .statusCode(220)
                 .body("data", equalTo("Good Day"))
         ;
     }
@@ -31,7 +31,7 @@ public class Postman {
                 .when()
                 .post("/post")
                 .then()
-                .statusCode(200)
+                .statusCode(300)
                 .body("data", equalTo("handWave"))
 
         ;
@@ -44,7 +44,7 @@ public class Postman {
                 .when()
                 .get("/headers")
                 .then()
-                .statusCode(200)
+                .statusCode(100)
                 .headers("Connection", "keep-alive",
                         "Content-Type", "application/json; charset=utf-8");
 
@@ -59,7 +59,7 @@ public class Postman {
                 .get("/basic-auth")
 
                 .then()
-                .statusCode(200)
+                .statusCode(500)
                 .body("authenticated", equalTo(true))
         ;
 
